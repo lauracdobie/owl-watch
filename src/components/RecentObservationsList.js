@@ -1,6 +1,6 @@
 function RecentObservationsList({recentObservations}) {
     if (!recentObservations) return null;
-    const owls =  recentObservations.filter(bird => bird.comName === "Ruffed Grouse");
+    const owls =  recentObservations.filter(bird => bird.comName.includes("Owl"));
     console.log("Here are the owls:");
     console.log(owls);
 
@@ -9,7 +9,8 @@ function RecentObservationsList({recentObservations}) {
             {
                 name: owl.comName,
                 location: owl.locName,
-                key: owl.obsDt 
+                date: owl.obsDt,
+                key: owl.subId 
             }
         );
     });
@@ -23,8 +24,9 @@ function RecentObservationsList({recentObservations}) {
     const displayOwls = owlDetails.map(owl => {
         return (
             <li>
-                <p>{owl.name}</p> 
-                <p>{owl.location}</p>
+                <p>Name: {owl.name}</p> 
+                <p>Location: {owl.location}</p>
+                <p>Date: {owl.date}</p>
             </li>
         )
         });
@@ -35,7 +37,7 @@ function RecentObservationsList({recentObservations}) {
 
     return (
         <>
-            <h2>Recent observations list goes here</h2>
+            <h2>Recent owl sightings</h2>
             <ul>
                 {displayOwls}
             </ul>
