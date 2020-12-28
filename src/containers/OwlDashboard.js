@@ -1,4 +1,5 @@
 import {useState, useEffect} from "react";
+import RecentObservationsList from "../components/RecentObservationsList";
 
 function OwlDashboard() {
     const [recentObservations, setRecentObservations] = useState([]);
@@ -12,20 +13,29 @@ function OwlDashboard() {
         redirect: 'follow'
     };
 
-    // const getRecentObservations = (url, requestInfo) => {
-    //     let myPromise = fetch(url, requestInfo)
-    //     myPromise.then(response => response.text())
-    //     .then(data => {
-    //         console.log("Getting data...")
-    //         // console.log(data)
-    //         setRecentObservations(data);
+    // const getOwls = (array) => {
+    //     const owls =  array.filter(bird => bird.comName === "Ruffed Grouse");
+    //     console.log(owls);
+    //     owls.forEach(owl => {
+    //         return (
+    //         {
+    //             name: owl.comName,
+    //             location: owl.locName,
+    //             key: owl.obsDt 
+    //         }
+    //         )
     //     })
-    //     .catch(error => console.log("error", error));
+    // }
 
+    // const displayOwls = (owls) => {
+    //     owls.map(owl =>{
+    //         return (
+    //             <li>{owl.name} {owl.location}</li>
+    //         )
+    //     });
     // }
 
     useEffect(() => {
-        // getRecentObservations("https://api.ebird.org/v2/data/obs/CA-QC/recent", requestOptions);
         let myPromise = fetch("https://api.ebird.org/v2/data/obs/CA-QC/recent", requestOptions)
         myPromise.then(response => response.json())
         .then(data => {
@@ -38,13 +48,19 @@ function OwlDashboard() {
         .catch(error => console.log("error", error))
     }, []);
 
-    useEffect (() => {
-        console.log("Here is a recent observation:");
-        console.log(recentObservations[1]);
-    }, [recentObservations])
+    // useEffect (() => {
+    //     // console.log("Here is a recent observation:");
+    //     // console.log(recentObservations[5]);
+    //    const myOwls = getOwls(recentObservations);
+    //    console.log(myOwls);
+    // //    displayOwls(myOwls);
+    // }, [recentObservations])
 
     return (
-    <h2>Owl-related things will go in here</h2>
+    <>
+        <h2>Owl-related things will go in here</h2>
+        <RecentObservationsList recentObservations={recentObservations}/>
+    </>
  );
 }
 
