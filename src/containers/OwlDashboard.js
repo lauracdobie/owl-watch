@@ -32,7 +32,6 @@ function OwlDashboard() {
     <>
         <h2>Owl-related things will go in here</h2>
         <RecentObservationsList recentObservations={recentObservations}/>
-        <Sighting />
     </>
  );
 }

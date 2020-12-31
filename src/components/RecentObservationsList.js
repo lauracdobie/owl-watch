@@ -8,21 +8,19 @@ function RecentObservationsList({recentObservations}) {
 
     const owlDetails = owls.map(owl => {
         return (
-            <Sighting
-                name = {owl.comName}
-                location = {owl.locName}
-                date = {owl.obsDt}
-                key = {owl.subId} 
-            />
+                <Sighting
+                    name = {owl.comName}
+                    location = {owl.locName}
+                    date = {owl.obsDt}
+                    key = {owl.subId} 
+                />
         );
     });
 
     return (
         <>
             <h2>Recent owl sightings</h2>
-            <ul>
-                {owlDetails}
-            </ul>
+            {owlDetails}
         </>
     )
 }

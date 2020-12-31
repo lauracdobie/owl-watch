@@ -1,10 +1,10 @@
 function Sighting(props) {
     return (
-        <li>
-            <p>Name: {props.name}</p> 
-            <p>Location: {props.location}</p>
-            <p>Date: {props.date}</p>
-        </li>
+        <div>
+            <h3>{props.name}</h3>
+            <p>{props.location}</p>
+            <p>{props.date}</p>
+        </div>
     )
 };
 
