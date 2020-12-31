@@ -1,5 +1,6 @@
 import {useState, useEffect} from "react";
 import RecentObservationsList from "../components/RecentObservationsList";
+import Sighting from "../components/Sighting";
 
 function OwlDashboard() {
     const [recentObservations, setRecentObservations] = useState([]);
@@ -13,27 +14,6 @@ function OwlDashboard() {
         redirect: 'follow'
     };
 
-    // const getOwls = (array) => {
-    //     const owls =  array.filter(bird => bird.comName === "Ruffed Grouse");
-    //     console.log(owls);
-    //     owls.forEach(owl => {
-    //         return (
-    //         {
-    //             name: owl.comName,
-    //             location: owl.locName,
-    //             key: owl.obsDt 
-    //         }
-    //         )
-    //     })
-    // }
-
-    // const displayOwls = (owls) => {
-    //     owls.map(owl =>{
-    //         return (
-    //             <li>{owl.name} {owl.location}</li>
-    //         )
-    //     });
-    // }
 
     useEffect(() => {
         let myPromise = fetch("https://api.ebird.org/v2/data/obs/CA-QC/recent", requestOptions)
@@ -48,18 +28,11 @@ function OwlDashboard() {
         .catch(error => console.log("error", error))
     }, []);
 
-    // useEffect (() => {
-    //     // console.log("Here is a recent observation:");
-    //     // console.log(recentObservations[5]);
-    //    const myOwls = getOwls(recentObservations);
-    //    console.log(myOwls);
-    // //    displayOwls(myOwls);
-    // }, [recentObservations])
-
     return (
     <>
         <h2>Owl-related things will go in here</h2>
         <RecentObservationsList recentObservations={recentObservations}/>
+        <Sighting />
     </>
  );
 }
