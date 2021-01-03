@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro&family=JetBrains+Mono&display=swap');
+
 body {
     font-family: 'Crimson Pro', serif;
     background-color: #F6F1EA;
@@ -14,4 +16,29 @@ header {
 
 .logo {
     width: 296px;
+}
+
+.did-you-know {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.did-you-know > h3 {
+    text-transform: uppercase;
+    font-family: 'JetBrains Mono', monospace;
+    color: #965613;
+    font-size: 14px;
+}
+
+.recent-sightings > h3 {
+    text-transform: uppercase;
+    font-family: 'JetBrains Mono', monospace;
+    color: #965613;
+    font-size: 14px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    text-align: center;
 }
