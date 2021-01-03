@@ -1,9 +1,11 @@
-import OwlDashboard from "./containers/OwlDashboard"
+import "./App.css"
+import OwlDashboard from "./containers/OwlDashboard";
+import Header from "./components/Header";
 
 function App() {
   return (
     <>
-      <h1>Owl Watch</h1>
+      <Header />
       <OwlDashboard />
     </>
   );

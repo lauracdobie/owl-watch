@@ -1,6 +1,5 @@
 import {useState, useEffect} from "react";
 import RecentObservationsList from "../components/RecentObservationsList";
-import Sighting from "../components/Sighting";
 
 function OwlDashboard() {
     const [recentObservations, setRecentObservations] = useState([]);
@@ -16,21 +15,21 @@ function OwlDashboard() {
 
 
     useEffect(() => {
-        let myPromise = fetch("https://api.ebird.org/v2/data/obs/CA-QC/recent", requestOptions)
+        let myPromise = fetch("https://api.ebird.org/v2/data/obs/GB-SCT/recent?back=30", requestOptions)
         myPromise.then(response => response.json())
         .then(data => {
             console.log("Getting data...")
-            // console.log(data)
+            console.log(data)
             setRecentObservations(data);
             // console.log(recentObservations);
             
         })
         .catch(error => console.log("error", error))
+
     }, []);
 
     return (
     <>
-        <h2>Owl-related things will go in here</h2>
         <RecentObservationsList recentObservations={recentObservations}/>
     </>
  );
