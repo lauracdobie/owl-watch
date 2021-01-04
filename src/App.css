@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro&family=JetBrains+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200;0,400;1,400&family=JetBrains+Mono&display=swap');
 
 body {
     font-family: 'Crimson Pro', serif;
@@ -9,8 +8,6 @@ body {
 header {
     padding-top: 90px;
     padding-bottom: 90px;
-    margin-left: auto;
-    margin-right: auto;
     text-align: center;
 }
 
@@ -18,27 +15,131 @@ header {
     width: 296px;
 }
 
-.did-you-know {
+.title > h2 {
+    text-transform: uppercase;
+    font-family: 'JetBrains Mono', monospace;
+    color: #965613;
+    font-size: 14px;
     padding-top: 40px;
     padding-bottom: 40px;
+    text-align: center;
+    font-weight: 400;
+    margin: 0;
+    border-top: solid 1px #E2DACE;
+}
+
+.owl {
+    background-color: #fff;
+    width: 270px;
+    margin-right: 30px;
+
+}
+
+.owl > p, h3 {
+    text-align: center;
+    font-weight: 400;
+    line-height: 1.2;
+    font-size: 19px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 0;
+}
+
+.owl > p {
+    color: #766967;
+}
+
+.owl > h3 {
+    color: #12602C;
+    margin-top: 28px;
+}
+
+#sci-name, #location {
+    font-style: italic;    
+}
+
+#date-time {
+    font-family:'JetBrains Mono', monospace;
+    font-size: 14px;
+    margin-top: 30px;
+}
+
+#location {
+    padding-bottom: 30px;
+    margin-bottom: 0;
+}
+
+.owl-pic {
+    width: 270px;
+    margin-top: 20px;
+}
+
+.stats {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.stats > div {
+    width: 370px;
+    background-color: #fff;
+    margin-left: 40px;
+    margin-right: 40px;
+    text-align: center;
+}
+
+.stats > div > h3 {
+    font-size: 74px;
+    padding-right: 40px;
+    padding-left: 40px;
+    margin: 0;
+    padding-top: 60px;
+    padding-bottom: 20px;
+    color: #C77F35;
+    font-weight: 200;
+    line-height: 1;
+}
+
+.stats > div > p {
+    font-size: 19px;
+    margin: 0;
+    line-height: 1.2;
+    color: #766967;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 76px;
+
+}
+.sightings-container {
+    display: flex;
+    justify-content: center;
+}
+
+footer {
+    color: #786967;
+    text-align: center;
+    padding-top: 34px;
+    padding-bottom: 34px;
+    border-top: solid 1px #E2DACE;
+}
+
+footer > p > a {
+    color: #786967;
+}
+
+footer > p {
+    margin: 0;
+    line-height: 1.9;
+    font-family:'JetBrains Mono', monospace;
+    font-size: 14px;
+}
+
+.container {
+    max-width: 1170px;
     margin-left: auto;
     margin-right: auto;
-    text-align: center;
 }
 
-.did-you-know > h3 {
-    text-transform: uppercase;
-    font-family: 'JetBrains Mono', monospace;
-    color: #965613;
-    font-size: 14px;
-}
-
-.recent-sightings > h3 {
-    text-transform: uppercase;
-    font-family: 'JetBrains Mono', monospace;
-    color: #965613;
-    font-size: 14px;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    text-align: center;
+.recent-sightings {
+    padding-bottom: 70px;
 }

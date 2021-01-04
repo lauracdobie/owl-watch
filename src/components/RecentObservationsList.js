@@ -27,22 +27,28 @@ function RecentObservationsList({recentObservations}) {
 
     return (
         <>
-            <section className="did-you-know">
-                <h3>Did you know?</h3>
-            </section>
-            <section className="stats">
-                <div>
-                    <h4>{totalRecentObservations}</h4>
-                    <p>different species of bird have been spotted in Scotland in the last 30 days.</p>
+            <section className="container">
+                <div className="title">
+                    <h2>Did you know?</h2>
                 </div>
-                <div>
-                    <h4>1 in every {displayStat}</h4>
-                    <p>of these sightings was an owl.</p>
+                <div className="stats">
+                    <div>
+                        <h3>{totalRecentObservations}</h3>
+                        <p>different species of bird have been spotted in Scotland in the last 30 days.</p>
+                    </div>
+                    <div>
+                        <h3>1 in every {displayStat}</h3>
+                        <p>of these sightings was an owl.</p>
+                    </div>
                 </div>
             </section>
-            <section className="recent-sightings">
-                <h3>Recent owl sightings in Scotland</h3>
-                {owlDetails}
+            <section className="container" className="recent-sightings">
+                <div className="title">
+                    <h2>Recent owl sightings in Scotland</h2>
+                </div>
+                <div className="sightings-container">
+                    {owlDetails}
+                </div>
             </section>
         </>
     )

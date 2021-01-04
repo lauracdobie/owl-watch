@@ -34,10 +34,9 @@ function Sighting(props) {
         <div className="owl">
             <img className="owl-pic" src={owlImage} alt={props.name}/>
             <h3>{props.name}</h3>
-            <p>{props.sciName}</p>
-            <p>{props.location}</p>
-            <p>{props.date}</p>
-            <p>Number of owls: {props.number}</p>
+            <p id="sci-name">{props.sciName}</p>
+            <p id="date-time">{props.date}</p>
+            <p id="location">{props.location}</p>
         </div>
     )
 };
