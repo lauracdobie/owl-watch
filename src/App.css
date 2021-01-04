@@ -143,3 +143,9 @@ footer > p {
 .recent-sightings {
     padding-bottom: 70px;
 }
+
+.leaflet-container {
+    height: 600px;
+    width: 100%;
+  }
+  

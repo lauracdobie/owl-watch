@@ -1,4 +1,5 @@
 import Sighting from "./Sighting";
+import SightingMap from "./SightingMap.js"
 
 function RecentObservationsList({recentObservations}) {
     if (!recentObservations) return null;
@@ -49,6 +50,7 @@ function RecentObservationsList({recentObservations}) {
                 <div className="sightings-container">
                     {owlDetails}
                 </div>
+                <SightingMap />
             </section>
         </>
     )
