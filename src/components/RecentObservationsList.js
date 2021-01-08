@@ -1,5 +1,6 @@
 import Sighting from "./Sighting";
 import SightingMap from "./SightingMap.js"
+import { useState } from 'react';
 
 function RecentObservationsList({recentObservations}) {
     if (!recentObservations) return null;
@@ -50,7 +51,7 @@ function RecentObservationsList({recentObservations}) {
                 <div className="sightings-container">
                     {owlDetails}
                 </div>
-                <SightingMap />
+                <SightingMap owls={owls}/>
             </section>
         </>
     )
