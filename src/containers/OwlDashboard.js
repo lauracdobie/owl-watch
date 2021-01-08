@@ -1,11 +1,12 @@
 import {useState, useEffect} from "react";
 import RecentObservationsList from "../components/RecentObservationsList";
+import {myKey} from "./secrets";
 
 function OwlDashboard() {
     const [recentObservations, setRecentObservations] = useState([]);
 
     let myHeaders = new Headers();
-    myHeaders.append("X-eBirdApiToken", "qvm62q5vr67v");
+    myHeaders.append("X-eBirdApiToken", myKey);
 
     let requestOptions = {
         method: 'GET',
