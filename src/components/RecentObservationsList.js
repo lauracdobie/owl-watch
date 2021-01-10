@@ -51,6 +51,8 @@ function RecentObservationsList({recentObservations}) {
                 <div className="sightings-container">
                     {owlDetails}
                 </div>
+            </section>
+            <section className="container">
                 <SightingMap owls={owls}/>
             </section>
         </>
