@@ -1,6 +1,5 @@
 import Sighting from "./Sighting";
 import SightingMap from "./SightingMap.js"
-import { useState } from 'react';
 
 function RecentObservationsList({recentObservations}) {
     if (!recentObservations) return null;

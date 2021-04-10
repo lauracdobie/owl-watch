@@ -22,7 +22,6 @@ function OwlDashboard() {
             console.log("Getting data...")
             console.log(data)
             setRecentObservations(data);
-            // console.log(recentObservations);
             
         })
         .catch(error => console.log("error", error))

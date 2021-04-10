@@ -3,13 +3,14 @@ import { Popup, MapContainer as Map, TileLayer, Marker } from 'react-leaflet';
 import Sighting from "./Sighting";
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
+import BigOwl from "../assets/BigOwl.png";
 
 const SightingMap = ({ owls }) => {
   const [currentLocation, setCurrentLocation] = useState({ lat: 56.4906712, lng: -4.2026458 });
   const [zoom, setZoom] = useState(7);
-  const markerIcon = L.icon({
-    // some generic icon from google
-    iconUrl: "https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678111-map-marker-512.png", 
+  const markerIcon = L.icon ({
+    // Owl image
+    iconUrl: BigOwl,
     iconSize: [35, 35] 
   });
 
