@@ -148,4 +148,34 @@ footer > p {
     height: 600px;
     width: 100%;
   }
+
+/* Styles for loading animation */
+@keyframes growAnimation {   
+    from {   
+      transform: scale(0);   
+    }   
+    to {   
+      transform: scale(1);   
+    }
+  }.loading-owl-image {   
+    width: 100px;   
+    height: 100px;    
+    animation: growAnimation 0.9s ease-in-out infinite;   
+  }
+
+  .loading-image-container {
+      margin-left: auto;
+      margin-right: auto;
+      width: 100px;
+  }
+
+  .loading-text > p {
+    font-family: 'Crimson Pro', serif;
+    color: #C77F35;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
   
