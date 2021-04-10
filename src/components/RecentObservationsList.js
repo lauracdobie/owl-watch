@@ -4,8 +4,6 @@ import SightingMap from "./SightingMap.js"
 function RecentObservationsList({recentObservations}) {
     if (!recentObservations) return null;
     const owls =  recentObservations.filter(bird => bird.comName.includes("Owl"));
-    console.log("Here are the owls:");
-    console.log(owls);
 
     const totalRecentObservations = recentObservations.length;
     const totalOwls = owls.length;
