@@ -17,7 +17,7 @@ const SightingMap = ({ owls }) => {
   const owlMarkers = owls.map((owl, index) => {
     return (
       <Marker key={index} position={[owl.lat, owl.lng]} icon={markerIcon} >
-        <Popup>
+        <Popup className="popup">
           <Sighting
             name={owl.comName}
             sciName={owl.sciName}
@@ -32,7 +32,7 @@ const SightingMap = ({ owls }) => {
   })
 
   return (
-    <Map center={currentLocation} zoom={zoom}>
+    <Map center={currentLocation} zoom={zoom} scrollWheelZoom={false}>
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
