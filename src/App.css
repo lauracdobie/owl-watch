@@ -33,6 +33,7 @@ header {
     margin-left: 20px;
     margin-right: 20px;
     margin-top: 30px;
+    max-width: 250px;
 
 }
 
@@ -190,5 +191,11 @@ footer > p {
   .popup {
       width: 300px;
   }
+
+@media (max-width:620px) {
+    .leaflet-container {
+        height: 400px;
+    }
+}
 
   
