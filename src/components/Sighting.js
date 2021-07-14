@@ -4,6 +4,7 @@ import LittleOwl from "../assets/little-owl.png";
 import LongEaredOwl from "../assets/long-eared-owl.png";
 import ShortEaredOwl from "../assets/short-eared-owl.png";
 import TawnyOwl from "../assets/tawny-owl.png";
+import SnowyOwl from "../assets/SnowyOwl.jpg";
 
 function Sighting(props) {
     let owlImage = null;
@@ -25,6 +26,10 @@ function Sighting(props) {
         }
         else if (props.name === "Tawny Owl") {
             return owlImage = TawnyOwl;
+        }
+
+        else if (props.name === "Snowy Owl") {
+            return owlImage = SnowyOwl;
         }
     }
 
