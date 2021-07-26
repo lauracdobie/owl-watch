@@ -4,7 +4,7 @@ import LittleOwl from "../assets/little-owl.png";
 import LongEaredOwl from "../assets/long-eared-owl.png";
 import ShortEaredOwl from "../assets/short-eared-owl.png";
 import TawnyOwl from "../assets/tawny-owl.png";
-import SnowyOwl from "../assets/SnowyOwl.jpg";
+import SnowyOwl from "../assets/snowy-owl.png";
 
 function Sighting(props) {
     let owlImage = null;
