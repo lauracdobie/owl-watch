@@ -1,5 +1,7 @@
 # Owl Dash
 
+*I'm currently working on upgrading Owl Dash to redeploy it*
+
 A React app that displays information on owl sightings in Scotland using data from the eBird API and a Leaflet map.
 
 ![image](https://user-images.githubusercontent.com/72345316/110028895-bc3b4a00-7d2b-11eb-8eb5-a9252c384ce7.png)
